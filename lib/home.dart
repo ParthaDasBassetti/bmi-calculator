@@ -70,8 +70,38 @@ class _HomePageState extends State<HomePage> {
             ),
             itemBox(cardOptions: calculateOptions, title: "Calculate"),
             Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: EdgeInsets.only(top: 30),
               child: itemBox(cardOptions: nearbyOptions, title: "Near By"),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      margin: EdgeInsets.only(left: 10,bottom: 7),
+                      child: Text(
+                        "Health News",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      "assets/images/healthNews.png",
+                      height: 110,
+                      width: 300,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
